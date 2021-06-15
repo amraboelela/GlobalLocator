@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		F5D44F1C26783F7E009ECECB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D44EF126783F6E009ECECB /* ContentView.swift */; };
 		F5D44F1D26783F7E009ECECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D44EF226783F7D009ECECB /* Assets.xcassets */; };
 		F5D44F1E26783F7E009ECECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D44EF226783F7D009ECECB /* Assets.xcassets */; };
+		F5D44F3226784D45009ECECB /* GlobalLocator in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F3126784D45009ECECB /* GlobalLocator */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D44F3226784D45009ECECB /* GlobalLocator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +170,7 @@
 			);
 			name = "GlobalLocator (iOS)";
 			packageProductDependencies = (
+				F5D44F3126784D45009ECECB /* GlobalLocator */,
 			);
 			productName = "GlobalLocator (iOS)";
 			productReference = F5D44EF726783F7D009ECECB /* GlobalLocatorApp.app */;
@@ -261,6 +264,7 @@
 			);
 			mainGroup = F5D44EEA26783F6D009ECECB;
 			packageReferences = (
+				F5D44F3026784D45009ECECB /* XCRemoteSwiftPackageReference "GlobalLocator" */,
 			);
 			productRefGroup = F5D44EF826783F7D009ECECB /* Products */;
 			projectDirPath = "";
@@ -700,6 +704,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F5D44F3026784D45009ECECB /* XCRemoteSwiftPackageReference "GlobalLocator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amraboelela/GlobalLocator.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5D44F3126784D45009ECECB /* GlobalLocator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5D44F3026784D45009ECECB /* XCRemoteSwiftPackageReference "GlobalLocator" */;
+			productName = GlobalLocator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5D44EEB26783F6E009ECECB /* Project object */;
 }
