@@ -156,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F5D44EF626783F7D009ECECB /* GlobalLocator (iOS) */ = {
+		F5D44EF626783F7D009ECECB /* GlobalLocatorApp (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5D44F2126783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocator (iOS)" */;
+			buildConfigurationList = F5D44F2126783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocatorApp (iOS)" */;
 			buildPhases = (
 				F5D44EF326783F7D009ECECB /* Sources */,
 				F5D44EF426783F7D009ECECB /* Frameworks */,
@@ -168,7 +168,7 @@
 			);
 			dependencies = (
 			);
-			name = "GlobalLocator (iOS)";
+			name = "GlobalLocatorApp (iOS)";
 			packageProductDependencies = (
 				F5D44F3126784D45009ECECB /* GlobalLocator */,
 			);
@@ -176,9 +176,9 @@
 			productReference = F5D44EF726783F7D009ECECB /* GlobalLocatorApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5D44EFE26783F7D009ECECB /* GlobalLocator (macOS) */ = {
+		F5D44EFE26783F7D009ECECB /* GlobalLocatorApp (macOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5D44F2426783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocator (macOS)" */;
+			buildConfigurationList = F5D44F2426783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocatorApp (macOS)" */;
 			buildPhases = (
 				F5D44EFB26783F7D009ECECB /* Sources */,
 				F5D44EFC26783F7D009ECECB /* Frameworks */,
@@ -188,7 +188,7 @@
 			);
 			dependencies = (
 			);
-			name = "GlobalLocator (macOS)";
+			name = "GlobalLocatorApp (macOS)";
 			productName = "GlobalLocator (macOS)";
 			productReference = F5D44EFF26783F7D009ECECB /* GlobalLocatorApp.app */;
 			productType = "com.apple.product-type.application";
@@ -254,7 +254,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5D44EEE26783F6E009ECECB /* Build configuration list for PBXProject "GlobalLocator" */;
+			buildConfigurationList = F5D44EEE26783F6E009ECECB /* Build configuration list for PBXProject "GlobalLocatorApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,8 +270,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5D44EF626783F7D009ECECB /* GlobalLocator (iOS) */,
-				F5D44EFE26783F7D009ECECB /* GlobalLocator (macOS) */,
+				F5D44EF626783F7D009ECECB /* GlobalLocatorApp (iOS) */,
+				F5D44EFE26783F7D009ECECB /* GlobalLocatorApp (macOS) */,
 				F5D44F0626783F7D009ECECB /* Tests iOS */,
 				F5D44F1126783F7D009ECECB /* Tests macOS */,
 			);
@@ -351,12 +351,12 @@
 /* Begin PBXTargetDependency section */
 		F5D44F0926783F7D009ECECB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5D44EF626783F7D009ECECB /* GlobalLocator (iOS) */;
+			target = F5D44EF626783F7D009ECECB /* GlobalLocatorApp (iOS) */;
 			targetProxy = F5D44F0826783F7D009ECECB /* PBXContainerItemProxy */;
 		};
 		F5D44F1426783F7D009ECECB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5D44EFE26783F7D009ECECB /* GlobalLocator (macOS) */;
+			target = F5D44EFE26783F7D009ECECB /* GlobalLocatorApp (macOS) */;
 			targetProxy = F5D44F1326783F7D009ECECB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -658,7 +658,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F5D44EEE26783F6E009ECECB /* Build configuration list for PBXProject "GlobalLocator" */ = {
+		F5D44EEE26783F6E009ECECB /* Build configuration list for PBXProject "GlobalLocatorApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5D44F1F26783F7E009ECECB /* Debug */,
@@ -667,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5D44F2126783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocator (iOS)" */ = {
+		F5D44F2126783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocatorApp (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5D44F2226783F7E009ECECB /* Debug */,
@@ -676,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5D44F2426783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocator (macOS)" */ = {
+		F5D44F2426783F7E009ECECB /* Build configuration list for PBXNativeTarget "GlobalLocatorApp (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5D44F2526783F7E009ECECB /* Debug */,
