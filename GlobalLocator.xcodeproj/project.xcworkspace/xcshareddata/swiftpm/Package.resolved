@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GlobalLocator",
+        "repositoryURL": "https://github.com/amraboelela/GlobalLocator.git",
+        "state": {
+          "branch": "main",
+          "revision": "2d846cade131473be3f75362a8ea62365289dba9",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
