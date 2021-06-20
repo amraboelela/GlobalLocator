@@ -18,6 +18,10 @@ struct ContentView: View {
     )
     @State var gl: String = ""
     @State var currentGL: String = ""
+    @State var prevRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
+        span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+    )
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -33,7 +37,8 @@ struct ContentView: View {
                                 span: globalLocatorLib.spanFor(code: gl)
                             )
                         } else {
-                            globalLocatorLib.regionFor(query: gl, fromRegion: region) { matchingItem, resultRegion in
+                            self.prevRegion = region
+                            globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
                                 region = resultRegion
                             }
                         }
@@ -42,12 +47,15 @@ struct ContentView: View {
                     }
                 )
                 .padding(.leading)
-                //Spacer()
                 Button(
                     action: {
-                        globalLocatorLib.regionFor(query: gl, fromRegion: region) { matchingItem, resultRegion in
-                            //region = result
-                            matchingItem?.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
+                        if globalLocatorLib.isGLCode(text: gl) {
+                            let mapItem = globalLocatorLib.mapItemFrom(code: gl)
+                            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
+                        } else {
+                            globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
+                                matchingItem?.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
+                            }
                         }
                     }
                 ) {

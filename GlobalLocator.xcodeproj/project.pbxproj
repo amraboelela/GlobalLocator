@@ -15,8 +15,6 @@
 		F5D44F1C26783F7E009ECECB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D44EF126783F6E009ECECB /* ContentView.swift */; };
 		F5D44F1D26783F7E009ECECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D44EF226783F7D009ECECB /* Assets.xcassets */; };
 		F5D44F1E26783F7E009ECECB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D44EF226783F7D009ECECB /* Assets.xcassets */; };
-		F5D44F34267BB0ED009ECECB /* Supporting Views in Resources */ = {isa = PBXBuildFile; fileRef = F5D44F33267BB0EC009ECECB /* Supporting Views */; };
-		F5D44F35267BB0ED009ECECB /* Supporting Views in Resources */ = {isa = PBXBuildFile; fileRef = F5D44F33267BB0EC009ECECB /* Supporting Views */; };
 		F5D44F47267D10DB009ECECB /* AmrSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F46267D10DB009ECECB /* AmrSwiftUI */; };
 		F5D44F4D267FD36F009ECECB /* GlobalLocatorLib in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F4C267FD36F009ECECB /* GlobalLocatorLib */; };
 		F5D44F50267FD3E7009ECECB /* AmrSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F4F267FD3E7009ECECB /* AmrSwiftUI */; };
@@ -55,7 +53,6 @@
 		F5D44F1226783F7D009ECECB /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D44F1626783F7E009ECECB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F5D44F1826783F7E009ECECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5D44F33267BB0EC009ECECB /* Supporting Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Supporting Views"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +110,6 @@
 				F5D44EF026783F6E009ECECB /* GlobalLocatorApp.swift */,
 				F5D44EF126783F6E009ECECB /* ContentView.swift */,
 				F5D44EF226783F7D009ECECB /* Assets.xcassets */,
-				F5D44F33267BB0EC009ECECB /* Supporting Views */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -308,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D44F1D26783F7E009ECECB /* Assets.xcassets in Resources */,
-				F5D44F34267BB0ED009ECECB /* Supporting Views in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D44F1E26783F7E009ECECB /* Assets.xcassets in Resources */,
-				F5D44F35267BB0ED009ECECB /* Supporting Views in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
