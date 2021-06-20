@@ -2,11 +2,20 @@
   "object": {
     "pins": [
       {
-        "package": "GlobalLocator",
-        "repositoryURL": "https://github.com/amraboelela/GlobalLocator.git",
+        "package": "AmrSwiftUI",
+        "repositoryURL": "https://github.com/amraboelela/AmrSwiftUI.git",
         "state": {
           "branch": "main",
-          "revision": "d0377e523c928792d12bf0d666b75b6c2be1f870",
+          "revision": "9055ea6be1ffff9cda975a12f66ebad2d5e354fe",
+          "version": null
+        }
+      },
+      {
+        "package": "GlobalLocatorLib",
+        "repositoryURL": "https://github.com/amraboelela/GlobalLocatorLib.git",
+        "state": {
+          "branch": "main",
+          "revision": "0e4e517eccb19d19b30c7efa1877099328a9c48a",
           "version": null
         }
       }
