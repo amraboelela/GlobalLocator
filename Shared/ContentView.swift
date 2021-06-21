@@ -27,14 +27,6 @@ struct ContentView: View {
     )
     @EnvironmentObject var locationManager: LocationManager
     
-    var userLatitude: String {
-        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
-    }
-        
-    var userLongitude: String {
-        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
-    }
-    
     var currentRegion: MKCoordinateRegion {
         get {
             if gotCurrentLocation {
@@ -130,12 +122,16 @@ struct ContentView: View {
                 Spacer()
             }
             #endif
-            Map(coordinateRegion: $region)
-                .onChange(of: region.center.longitude) {_ in
-                    print("center: \(currentRegion.center)")
-                    print("span: \(currentRegion.span)")
-                    currentGL = globalLocatorLib.codeFor(region: currentRegion)
-                }
+            if #available(iOS 14.0, *) {
+                Map(coordinateRegion: $region)
+                    .onChange(of: region.center.longitude) {_ in
+                        print("center: \(currentRegion.center)")
+                        print("span: \(currentRegion.span)")
+                        currentGL = globalLocatorLib.codeFor(region: currentRegion)
+                    }
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
 }

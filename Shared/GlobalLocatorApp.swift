@@ -8,6 +8,7 @@
 import SwiftUI
 import AmrSwiftUI
 
+@available(iOS 14.0, *)
 @main
 struct GlobalLocatorApp: App {
     var body: some Scene {
