@@ -47,50 +47,32 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 10) {
-                SearchBar(
-                    searchText: $gl,
-                    startSearchCallback: {
-                        print("startSearchCallback")
-                        if globalLocatorLib.isGLCode(text: gl) {
-                            gl = gl.uppercased()
-                            self.region = MKCoordinateRegion(
-                                center: globalLocatorLib.locationFor(code: gl),
-                                span: globalLocatorLib.spanFor(code: gl)
-                            )
-                        } else {
-                            self.prevRegion = currentRegion
-                            globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
-                                region = resultRegion
-                            }
-                        }
-                    }, updateDataCallback: {
-                        print("updateDataCallback")
-                    }
-                )
-                .padding(.leading)
-                Button(
-                    action: {
-                        if globalLocatorLib.isGLCode(text: gl) {
-                            let mapItem = globalLocatorLib.mapItemFrom(code: gl)
-                            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
-                        } else {
-                            globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
-                                matchingItem?.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
-                            }
+            SearchBar(
+                searchText: $gl,
+                startSearchCallback: {
+                    print("startSearchCallback")
+                    if globalLocatorLib.isGLCode(text: gl) {
+                        gl = gl.uppercased()
+                        self.region = MKCoordinateRegion(
+                            center: globalLocatorLib.locationFor(code: gl),
+                            span: globalLocatorLib.spanFor(code: gl)
+                        )
+                    } else {
+                        self.prevRegion = currentRegion
+                        globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
+                            region = resultRegion
                         }
                     }
-                ) {
-                    Image(systemName: "arrow.uturn.forward.square")
-                        .accessibility(label: Text("Direction to location"))
+                }, updateDataCallback: {
+                    print("updateDataCallback")
                 }
-                Spacer()
-            }
-            #if os(iOS)
+            )
+            .padding(.horizontal)
             HStack(spacing: 10) {
                 Text("Current GL:  " + currentGL)
                     .padding(.leading)
                 Spacer()
+                #if os(iOS)
                 Button(
                     action: {
                         UIPasteboard.general.setValue(
@@ -102,13 +84,7 @@ struct ContentView: View {
                     Image(systemName: "doc.on.doc")
                         .accessibility(label: Text("Copy Global Locator"))
                 }
-                Spacer()
-            }
-            #else
-            HStack(spacing: 10) {
-                Text("Current GL:  " + currentGL)
-                    .padding(.leading)
-                Spacer()
+                #else
                 Button(
                     action: {
                         let pasteBoard = NSPasteboard.general
@@ -119,9 +95,19 @@ struct ContentView: View {
                     Image(systemName: "doc.on.doc")
                         .accessibility(label: Text("Copy Global Locator"))
                 }
+                #endif
+                Spacer()
+                Button(
+                    action: {
+                        let mapItem = globalLocatorLib.mapItemFrom(code: currentGL)
+                        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
+                    }
+                ) {
+                    Image(systemName: "arrow.uturn.forward.square")
+                        .accessibility(label: Text("Direction to location"))
+                }
                 Spacer()
             }
-            #endif
             if #available(iOS 14.0, *) {
                 Map(coordinateRegion: $region)
                     .onChange(of: region.center.longitude) {_ in
