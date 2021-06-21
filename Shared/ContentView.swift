@@ -14,7 +14,8 @@ import MobileCoreServices
 #endif
 
 struct ContentView: View {
-    @State var region = MKCoordinateRegion(
+    @State var gotCurrentLocation = false
+    @State var region:MKCoordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
@@ -24,6 +25,33 @@ struct ContentView: View {
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
+    @StateObject var locationManager = LocationManager()
+    
+    var userLatitude: String {
+        return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
+    }
+        
+    var userLongitude: String {
+        return "\(locationManager.lastLocation?.coordinate.longitude ?? 0)"
+    }
+    
+    var currentRegion: MKCoordinateRegion {
+        get {
+            if gotCurrentLocation {
+                return region
+            } else {
+                if let latitude = locationManager.lastLocation?.coordinate.latitude,
+                   let longitude = locationManager.lastLocation?.coordinate.longitude {
+                    gotCurrentLocation = true
+                    region = MKCoordinateRegion(
+                        center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+                        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                    )
+                }
+                return region
+            }
+        }
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -39,7 +67,7 @@ struct ContentView: View {
                                 span: globalLocatorLib.spanFor(code: gl)
                             )
                         } else {
-                            self.prevRegion = region
+                            self.prevRegion = currentRegion
                             globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
                                 region = resultRegion
                             }
@@ -104,9 +132,9 @@ struct ContentView: View {
             #endif
             Map(coordinateRegion: $region)
                 .onChange(of: region.center.longitude) {_ in
-                    print("center: \(region.center)")
-                    print("span: \(region.span)")
-                    currentGL = globalLocatorLib.codeFor(region: region)
+                    print("center: \(currentRegion.center)")
+                    print("span: \(currentRegion.span)")
+                    currentGL = globalLocatorLib.codeFor(region: currentRegion)
                 }
         }
     }

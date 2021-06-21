@@ -11,7 +11,7 @@ import SwiftUI
 struct GlobalLocatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(gl: "GZ RK")
+            ContentView(gl: "")
         }
     }
 }
