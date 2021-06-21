@@ -25,7 +25,7 @@ struct ContentView: View {
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
-    @StateObject var locationManager = LocationManager()
+    @EnvironmentObject var locationManager: LocationManager
     
     var userLatitude: String {
         return "\(locationManager.lastLocation?.coordinate.latitude ?? 0)"
@@ -143,5 +143,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(gl: "GZNF3 RKJ2G")
+            .environmentObject(LocationManager())
     }
 }

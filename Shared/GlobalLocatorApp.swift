@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import AmrSwiftUI
 
 @main
 struct GlobalLocatorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(gl: "")
+                .environmentObject(LocationManager())
         }
     }
 }
