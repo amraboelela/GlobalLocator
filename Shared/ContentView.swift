@@ -9,7 +9,9 @@ import SwiftUI
 import AmrSwiftUI
 import MapKit
 import GlobalLocatorLib
+#if os(iOS)
 import MobileCoreServices
+#endif
 
 struct ContentView: View {
     @State var region = MKCoordinateRegion(
@@ -64,6 +66,7 @@ struct ContentView: View {
                 }
                 Spacer()
             }
+            #if os(iOS)
             HStack(spacing: 10) {
                 Text("Current GL:  " + currentGL)
                     .padding(.leading)
@@ -81,6 +84,24 @@ struct ContentView: View {
                 }
                 Spacer()
             }
+            #else
+            HStack(spacing: 10) {
+                Text("Current GL:  " + currentGL)
+                    .padding(.leading)
+                Spacer()
+                Button(
+                    action: {
+                        let pasteBoard = NSPasteboard.general
+                        pasteBoard.clearContents()
+                        pasteBoard.writeObjects([currentGL as NSString])
+                    }
+                ) {
+                    Image(systemName: "doc.on.doc")
+                        .accessibility(label: Text("Copy Global Locator"))
+                }
+                Spacer()
+            }
+            #endif
             Map(coordinateRegion: $region)
                 .onChange(of: region.center.longitude) {_ in
                     print("center: \(region.center)")
