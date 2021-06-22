@@ -111,8 +111,8 @@ struct ContentView: View {
             if #available(iOS 14.0, *) {
                 Map(coordinateRegion: $region)
                     .onChange(of: region.center.longitude) {_ in
-                        print("center: \(currentRegion.center)")
-                        print("span: \(currentRegion.span)")
+                        //print("center: \(currentRegion.center)")
+                        //print("span: \(currentRegion.span)")
                         currentGL = globalLocatorLib.codeFor(region: currentRegion)
                     }
             } else {
