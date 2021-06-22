@@ -19,15 +19,14 @@ struct ContentView: View {
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
-    //@State var mapRect: MKMapRect = MKMapRect()
     @State var gl: String = ""
     @State var currentGL: String = ""
     @State var prevRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
-    //@EnvironmentObject var locationManager: LocationManager
-    /*
+    @EnvironmentObject var locationManager: LocationManager
+    
     var currentRegion: MKCoordinateRegion {
         get {
             if gotCurrentLocation {
@@ -44,81 +43,82 @@ struct ContentView: View {
                 return region
             }
         }
-    }*/
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            TextField("Search", text: $gl)
-                .padding(.horizontal)
-            /*
             SearchBar(
                 searchText: $gl,
                 startSearchCallback: {
-                    print("startSearchCallback")
-                    if globalLocatorLib.isGLCode(text: gl) {
-                        gl = gl.uppercased()
-                        self.region = MKCoordinateRegion(
-                            center: globalLocatorLib.locationFor(code: gl),
-                            span: globalLocatorLib.spanFor(code: gl)
-                        )
-                    } else {
-                        self.prevRegion = region
-                        globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
-                            region = resultRegion
-                        }
+                print("startSearchCallback")
+                if globalLocatorLib.isGLCode(text: gl) {
+                    gl = gl.uppercased()
+                    self.region = MKCoordinateRegion(
+                        center: globalLocatorLib.locationFor(code: gl),
+                        span: globalLocatorLib.spanFor(code: gl)
+                    )
+                } else {
+                    self.prevRegion = currentRegion
+                    globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
+                        region = resultRegion
                     }
-                }, updateDataCallback: {
-                    print("updateDataCallback")
                 }
+            }, updateDataCallback: {
+                print("updateDataCallback")
+            }
             )
-            .padding(.horizontal)*/
-            /*HStack(spacing: 10) {
+                .padding(.horizontal)
+            HStack(spacing: 10) {
                 Text("Current GL:  " + currentGL)
                     .padding(.leading)
                 Spacer()
-                #if os(iOS)
+#if os(iOS)
                 Button(
                     action: {
-                        UIPasteboard.general.setValue(
-                            currentGL,
-                            forPasteboardType: kUTTypePlainText as String
-                        )
-                    }
+                    UIPasteboard.general.setValue(
+                        currentGL,
+                        forPasteboardType: kUTTypePlainText as String
+                    )
+                }
                 ) {
                     Image(systemName: "doc.on.doc")
                         .accessibility(label: Text("Copy Global Locator"))
                 }
-                #else
+#else
                 Button(
                     action: {
-                        let pasteBoard = NSPasteboard.general
-                        pasteBoard.clearContents()
-                        pasteBoard.writeObjects([currentGL as NSString])
-                    }
+                    let pasteBoard = NSPasteboard.general
+                    pasteBoard.clearContents()
+                    pasteBoard.writeObjects([currentGL as NSString])
+                }
                 ) {
                     Image(systemName: "doc.on.doc")
                         .accessibility(label: Text("Copy Global Locator"))
                 }
-                #endif
+#endif
                 Spacer()
                 Button(
                     action: {
-                        let mapItem = globalLocatorLib.mapItemFrom(code: currentGL)
-                        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDefault])
-                    }
+                    let mapItem = globalLocatorLib.mapItemFrom(code: currentGL)
+                    mapItem.openInMaps(
+                        launchOptions: [
+                            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDefault
+                        ]
+                    )
+                }
                 ) {
                     Image(systemName: "arrow.uturn.forward.square")
                         .accessibility(label: Text("Direction to location"))
                 }
                 Spacer()
-            }*/
+            }
             if #available(iOS 14.0, *) {
                 Map(coordinateRegion: $region)
-                    /*.onChange(of: region.center.longitude) {_ in
+                    .onChange(of: region.center.longitude) {_ in
                         //print("center: \(currentRegion.center)")
                         //print("span: \(currentRegion.span)")
-                        currentGL = globalLocatorLib.codeFor(region: region)
-                    }*/
+                        currentGL = globalLocatorLib.codeFor(region: currentRegion)
+                    }
             } else {
                 // Fallback on earlier versions
             }
@@ -126,9 +126,11 @@ struct ContentView: View {
     }
 }
 
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(gl: "GZNF3 RKJ2G")
             .environmentObject(LocationManager())
     }
 }
+#endif
