@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Shared
+//  GlobalLocator
 //
 //  Created by Amr Aboelela on 6/14/21.
 //
@@ -19,14 +19,15 @@ struct ContentView: View {
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
+    //@State var mapRect: MKMapRect = MKMapRect()
     @State var gl: String = ""
     @State var currentGL: String = ""
     @State var prevRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
-    @EnvironmentObject var locationManager: LocationManager
-    
+    //@EnvironmentObject var locationManager: LocationManager
+    /*
     var currentRegion: MKCoordinateRegion {
         get {
             if gotCurrentLocation {
@@ -43,10 +44,13 @@ struct ContentView: View {
                 return region
             }
         }
-    }
+    }*/
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
+            TextField("Search", text: $gl)
+                .padding(.horizontal)
+            /*
             SearchBar(
                 searchText: $gl,
                 startSearchCallback: {
@@ -58,7 +62,7 @@ struct ContentView: View {
                             span: globalLocatorLib.spanFor(code: gl)
                         )
                     } else {
-                        self.prevRegion = currentRegion
+                        self.prevRegion = region
                         globalLocatorLib.regionFor(query: gl, fromRegion: prevRegion) { matchingItem, resultRegion in
                             region = resultRegion
                         }
@@ -67,8 +71,8 @@ struct ContentView: View {
                     print("updateDataCallback")
                 }
             )
-            .padding(.horizontal)
-            HStack(spacing: 10) {
+            .padding(.horizontal)*/
+            /*HStack(spacing: 10) {
                 Text("Current GL:  " + currentGL)
                     .padding(.leading)
                 Spacer()
@@ -107,14 +111,14 @@ struct ContentView: View {
                         .accessibility(label: Text("Direction to location"))
                 }
                 Spacer()
-            }
+            }*/
             if #available(iOS 14.0, *) {
                 Map(coordinateRegion: $region)
-                    .onChange(of: region.center.longitude) {_ in
+                    /*.onChange(of: region.center.longitude) {_ in
                         //print("center: \(currentRegion.center)")
                         //print("span: \(currentRegion.span)")
-                        currentGL = globalLocatorLib.codeFor(region: currentRegion)
-                    }
+                        currentGL = globalLocatorLib.codeFor(region: region)
+                    }*/
             } else {
                 // Fallback on earlier versions
             }

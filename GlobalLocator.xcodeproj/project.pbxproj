@@ -19,6 +19,7 @@
 		F5D44F4D267FD36F009ECECB /* GlobalLocatorLib in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F4C267FD36F009ECECB /* GlobalLocatorLib */; };
 		F5D44F50267FD3E7009ECECB /* AmrSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F4F267FD3E7009ECECB /* AmrSwiftUI */; };
 		F5D44F52267FD3E7009ECECB /* GlobalLocatorLib in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F51267FD3E7009ECECB /* GlobalLocatorLib */; };
+		F5D44F56268240EC009ECECB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D44F55268240EB009ECECB /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		F5D44F1626783F7E009ECECB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		F5D44F1826783F7E009ECECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D44F53268106AC009ECECB /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
+		F5D44F55268240EB009ECECB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5D44F4D267FD36F009ECECB /* GlobalLocatorLib in Frameworks */,
+				F5D44F56268240EC009ECECB /* MapKit.framework in Frameworks */,
 				F5D44F47267D10DB009ECECB /* AmrSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +167,7 @@
 		F5D44F4E267FD3E7009ECECB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5D44F55268240EB009ECECB /* MapKit.framework */,
 				F5D44F53268106AC009ECECB /* Combine.framework */,
 			);
 			name = Frameworks;

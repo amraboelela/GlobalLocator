@@ -1,6 +1,6 @@
 //
 //  GlobalLocatorApp.swift
-//  Shared
+//  GlobalLocator
 //
 //  Created by Amr Aboelela on 6/14/21.
 //
