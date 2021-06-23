@@ -1,169 +1,169 @@
 {
   "images" : [
     {
-      "filename" : "globallocator_40.png",
+      "filename" : "globallocator_40_ios.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "globallocator_60.png",
+      "filename" : "globallocator_60_ios.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "globallocator_58-1.png",
+      "filename" : "globallocator_58_ios.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "globallocator_87.png",
+      "filename" : "globallocator_87_ios.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "globallocator_80.png",
+      "filename" : "globallocator_80_ios.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "globallocator_120.png",
+      "filename" : "globallocator_120_ios.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "globallocator_120-1.png",
+      "filename" : "globallocator_120_ios-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "globallocator_180.png",
+      "filename" : "globallocator_180_ios.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "globallocator_20.png",
+      "filename" : "globallocator_20_ios.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
-      "filename" : "globallocator_40-1.png",
+      "filename" : "globallocator_40_ios-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "globallocator_29.png",
+      "filename" : "globallocator_29_ios.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "globallocator_58.png",
+      "filename" : "globallocator_58_ios-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "globallocator_40-2.png",
+      "filename" : "globallocator_40_ios-2.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
-      "filename" : "globallocator_80-1.png",
+      "filename" : "globallocator_80_ios-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "globallocator_76.png",
+      "filename" : "globallocator_76_ios.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
-      "filename" : "globallocator_152.png",
+      "filename" : "globallocator_152_ios.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
-      "filename" : "globallocator_167.png",
+      "filename" : "globallocator_167_ios.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
-      "filename" : "globallocator.png",
+      "filename" : "globallocator_1024_ios.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
     },
     {
-      "filename" : "globallocator_16.png",
+      "filename" : "globallocator_16_mac3.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "globallocator_32.png",
+      "filename" : "globallocator_32_mac3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "globallocator_32-1.png",
+      "filename" : "globallocator_32_mac3-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "globallocator_64.png",
+      "filename" : "globallocator_64_mac3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "globallocator_128.png",
+      "filename" : "globallocator_128_mac3.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
-      "filename" : "globallocator_256-1.png",
+      "filename" : "globallocator_256_mac3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
-      "filename" : "globallocator_256.png",
+      "filename" : "globallocator_256_mac3-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
-      "filename" : "globallocator_512.png",
+      "filename" : "globallocator_512_mac3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "globallocator_512-1.png",
+      "filename" : "globallocator_512_mac3-1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "globallocator_1024.png",
+      "filename" : "globallocator_1024_mac3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
