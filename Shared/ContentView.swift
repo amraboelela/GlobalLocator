@@ -113,15 +113,29 @@ struct ContentView: View {
                 }
                 Spacer()
             }
-            if #available(iOS 14.0, *) {
-                Map(coordinateRegion: $region)
+            GeometryReader { geometry in
+                if #available(iOS 14.0, *) {
+                    Map(
+                        coordinateRegion: $region,
+                        annotationItems: [
+                            globalLocatorLib.annotationFor(
+                                region: region,
+                                mapWidth: geometry.size.width
+                            )
+                        ]
+                    ) { annotation in
+                        MapAnnotation(coordinate: annotation.location) {
+                            Rectangle()
+                                .strokeBorder(Color.red, lineWidth: 4)
+                                .frame(width: annotation.span, height: annotation.span)
+                        }
+                    }
                     .onChange(of: region.center.longitude) {_ in
-                        //print("center: \(currentRegion.center)")
-                        //print("span: \(currentRegion.span)")
                         currentGL = globalLocatorLib.codeFor(region: currentRegion)
                     }
-            } else {
-                // Fallback on earlier versions
+                } else {
+                    // Fallback on earlier versions
+                }
             }
         }
     }
