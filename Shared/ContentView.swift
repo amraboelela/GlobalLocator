@@ -38,7 +38,7 @@ struct ContentView: View {
                     locationManager.locationManager.stopUpdatingLocation()
                     region = MKCoordinateRegion(
                         center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
-                        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+                        span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
                     )
                 }
                 return region
@@ -120,17 +120,17 @@ struct ContentView: View {
                         annotationItems: [
                             globalLocatorLib.annotationFor(
                                 region: region,
-                                mapWidth: geometry.size.width
+                                mapSize: geometry.size
                             )
                         ]
                     ) { annotation in
-                        MapAnnotation(coordinate: annotation.location) {
+                        return MapAnnotation(coordinate: annotation.location) {
                             Rectangle()
                                 .strokeBorder(Color.red, lineWidth: 4)
-                                .frame(width: annotation.span, height: annotation.span)
+                                .frame(width: annotation.span.width, height: annotation.span.height)
                         }
                     }
-                    .onChange(of: region.center.longitude) {_ in
+                    .onChange(of: region.center) {_ in
                         currentGL = globalLocatorLib.codeFor(region: currentRegion)
                     }
                 } else {
