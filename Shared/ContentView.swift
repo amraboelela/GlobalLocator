@@ -58,7 +58,7 @@ struct ContentView: View {
             mapSize: mapSize
         )]
         if gotCurrentLocation {
-            result.append(GLRegion(id: "userRegion", location: userRegion.center, span: CGSize(width: 0, height: 0)))
+            result.append(GLRegion(id: "userRegion", location: userRegion.center, span: CGSize(width: 40, height: 40)))
         }
         return result
     }
@@ -150,7 +150,7 @@ struct ContentView: View {
                             if annotation.id == "userRegion" {
                                 Circle()
                                     .strokeBorder(Color.blue, lineWidth: 4)
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: annotation.span.width, height: annotation.span.height)
                             } else {
                                 Rectangle()
                                     .strokeBorder(Color.red, lineWidth: 4)
