@@ -19,6 +19,10 @@ struct ContentView: View {
         center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
         span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
     )
+    @State var userRegion:MKCoordinateRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
+        span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+    )
     @State var gl: String = ""
     @State var currentGL: String = ""
     @State var prevRegion = MKCoordinateRegion(
@@ -38,12 +42,25 @@ struct ContentView: View {
                     locationManager.locationManager.stopUpdatingLocation()
                     region = MKCoordinateRegion(
                         center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
-                        span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+                        span: MKCoordinateSpan(latitudeDelta: 0.0015, longitudeDelta: 0.0015)
                     )
+                    userRegion = region
+                    print("userRegion: \(userRegion)")
                 }
                 return region
             }
         }
+    }
+    
+    func annotations(region: MKCoordinateRegion, mapSize: CGSize) -> [GLRegion] {
+        var result = [globalLocatorLib.annotationFor(
+            region: region,
+            mapSize: mapSize
+        )]
+        if gotCurrentLocation {
+            result.append(GLRegion(id: "userRegion", location: userRegion.center, span: CGSize(width: 0, height: 0)))
+        }
+        return result
     }
     
     var body: some View {
@@ -70,8 +87,18 @@ struct ContentView: View {
             )
                 .padding(.horizontal)
             HStack(spacing: 10) {
-                Text("Current GL:  " + currentGL)
+                Text("Current GL:  ")
                     .padding(.leading)
+                if #available(iOS 14.0, *) {
+                    Text(currentGL)
+                        .bold()
+                        .font(.title3)
+                } else {
+                    Text(currentGL)
+                        .bold()
+                        .font(.headline)
+                    // Fallback on earlier versions
+                }
                 Spacer()
 #if os(iOS)
                 Button(
@@ -117,17 +144,18 @@ struct ContentView: View {
                 if #available(iOS 14.0, *) {
                     Map(
                         coordinateRegion: $region,
-                        annotationItems: [
-                            globalLocatorLib.annotationFor(
-                                region: region,
-                                mapSize: geometry.size
-                            )
-                        ]
+                        annotationItems: annotations(region: region, mapSize: geometry.size)
                     ) { annotation in
                         return MapAnnotation(coordinate: annotation.location) {
-                            Rectangle()
-                                .strokeBorder(Color.red, lineWidth: 4)
-                                .frame(width: annotation.span.width, height: annotation.span.height)
+                            if annotation.id == "userRegion" {
+                                Circle()
+                                    .strokeBorder(Color.blue, lineWidth: 4)
+                                    .frame(width: 30, height: 30)
+                            } else {
+                                Rectangle()
+                                    .strokeBorder(Color.red, lineWidth: 4)
+                                    .frame(width: annotation.span.width, height: annotation.span.height)
+                            }
                         }
                     }
                     .onChange(of: region.center) {_ in
@@ -144,7 +172,7 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(gl: "GZNF3 RKJ2G")
+        ContentView(gl: "GZNF3RKJ")
             .environmentObject(LocationManager())
     }
 }
