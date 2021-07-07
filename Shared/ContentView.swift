@@ -87,19 +87,26 @@ struct ContentView: View {
             )
                 .padding(.horizontal)
             HStack(spacing: 10) {
+                #if !os(watchOS)
                 Text("Current GL:  ")
                     .padding(.leading)
+                #endif
                 if #available(iOS 14.0, *) {
+                    #if os(watchOS)
+                    Text(currentGL)
+                    #else
                     Text(currentGL)
                         .bold()
                         .font(.title3)
+                    #endif
                 } else {
                     Text(currentGL)
                         .bold()
                         .font(.headline)
-                    // Fallback on earlier versions
                 }
+                #if !os(watchOS)
                 Spacer()
+                #endif
 #if os(iOS)
                 Button(
                     action: {
@@ -112,7 +119,7 @@ struct ContentView: View {
                     Image(systemName: "doc.on.doc")
                         .accessibility(label: Text("Copy Global Locator"))
                 }
-#else
+#elseif os(macOS)
                 Button(
                     action: {
                     let pasteBoard = NSPasteboard.general
@@ -124,7 +131,9 @@ struct ContentView: View {
                         .accessibility(label: Text("Copy Global Locator"))
                 }
 #endif
+                //#if !os(watchOS)
                 Spacer()
+                //#endif
                 Button(
                     action: {
                     let mapItem = globalLocatorLib.mapItemFrom(code: currentGL)
@@ -138,7 +147,9 @@ struct ContentView: View {
                     Image(systemName: "arrow.uturn.forward.square")
                         .accessibility(label: Text("Direction to location"))
                 }
+                #if !os(watchOS)
                 Spacer()
+                #endif
             }
             GeometryReader { geometry in
                 if #available(iOS 14.0, *) {

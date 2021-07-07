@@ -22,6 +22,19 @@
 		F5D44F50267FD3E7009ECECB /* AmrSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F4F267FD3E7009ECECB /* AmrSwiftUI */; };
 		F5D44F52267FD3E7009ECECB /* GlobalLocatorLib in Frameworks */ = {isa = PBXBuildFile; productRef = F5D44F51267FD3E7009ECECB /* GlobalLocatorLib */; };
 		F5D44F56268240EC009ECECB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D44F55268240EB009ECECB /* MapKit.framework */; };
+		F5DF9DB4268E75A00092D511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DF9DB3268E75A00092D511 /* Assets.xcassets */; };
+		F5DF9DBB268E75A00092D511 /* WatchGlobalLocator Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F5DF9DBA268E75A00092D511 /* WatchGlobalLocator Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5DF9DC4268E75A00092D511 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF9DC3268E75A00092D511 /* NotificationController.swift */; };
+		F5DF9DC6268E75A00092D511 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF9DC5268E75A00092D511 /* NotificationView.swift */; };
+		F5DF9DC8268E75A00092D511 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF9DC7268E75A00092D511 /* ComplicationController.swift */; };
+		F5DF9DCA268E75A10092D511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DF9DC9268E75A10092D511 /* Assets.xcassets */; };
+		F5DF9DCD268E75A10092D511 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5DF9DCC268E75A10092D511 /* Preview Assets.xcassets */; };
+		F5DF9DD9268E75A10092D511 /* WatchGlobalLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DF9DD8268E75A10092D511 /* WatchGlobalLocatorTests.swift */; };
+		F5DF9DE8268E75A10092D511 /* WatchGlobalLocator.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F5DF9DB1268E759C0092D511 /* WatchGlobalLocator.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F5DF9DF7268E7D0D0092D511 /* GlobalLocatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D44EF026783F6E009ECECB /* GlobalLocatorApp.swift */; };
+		F5DF9DF8268E7D120092D511 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D44EF126783F6E009ECECB /* ContentView.swift */; };
+		F5DF9DFA2694C3CB0092D511 /* AmrSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F5DF9DF92694C3CB0092D511 /* AmrSwiftUI */; };
+		F5DF9DFC2694D0810092D511 /* GlobalLocatorLib in Frameworks */ = {isa = PBXBuildFile; productRef = F5DF9DFB2694D0810092D511 /* GlobalLocatorLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +52,53 @@
 			remoteGlobalIDString = F5D44EFE26783F7D009ECECB;
 			remoteInfo = "GlobalLocator (macOS)";
 		};
+		F5DF9DBC268E75A00092D511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5D44EEB26783F6E009ECECB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5DF9DB9268E75A00092D511;
+			remoteInfo = "WatchGlobalLocator Extension";
+		};
+		F5DF9DD5268E75A10092D511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5D44EEB26783F6E009ECECB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5DF9DB9268E75A00092D511;
+			remoteInfo = "WatchGlobalLocator Extension";
+		};
+		F5DF9DE6268E75A10092D511 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5D44EEB26783F6E009ECECB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5DF9DB0268E759C0092D511;
+			remoteInfo = WatchGlobalLocator;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F5DF9DEC268E75A10092D511 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F5DF9DBB268E75A00092D511 /* WatchGlobalLocator Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DF9DF0268E75A10092D511 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				F5DF9DE8268E75A10092D511 /* WatchGlobalLocator.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F54E2A4526855A070026ACC0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -58,6 +117,22 @@
 		F5D44F1826783F7E009ECECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D44F53268106AC009ECECB /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
 		F5D44F55268240EB009ECECB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		F5DF9DB1268E759C0092D511 /* WatchGlobalLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGlobalLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5DF9DB3268E75A00092D511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5DF9DB5268E75A00092D511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5DF9DBA268E75A00092D511 /* WatchGlobalLocator Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchGlobalLocator Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5DF9DBF268E75A00092D511 /* GlobalLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalLocatorApp.swift; sourceTree = "<group>"; };
+		F5DF9DC1268E75A00092D511 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5DF9DC3268E75A00092D511 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		F5DF9DC5268E75A00092D511 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		F5DF9DC7268E75A00092D511 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		F5DF9DC9268E75A10092D511 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5DF9DCC268E75A10092D511 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5DF9DCE268E75A10092D511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5DF9DCF268E75A10092D511 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F5DF9DD4268E75A10092D511 /* WatchGlobalLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchGlobalLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5DF9DD8268E75A10092D511 /* WatchGlobalLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchGlobalLocatorTests.swift; sourceTree = "<group>"; };
+		F5DF9DDA268E75A10092D511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +169,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5DF9DB7268E75A00092D511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DF9DFC2694D0810092D511 /* GlobalLocatorLib in Frameworks */,
+				F5DF9DFA2694C3CB0092D511 /* AmrSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DF9DD1268E75A10092D511 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,6 +196,9 @@
 				F5D44F0026783F7D009ECECB /* macOS */,
 				F5D44F0A26783F7D009ECECB /* Tests iOS */,
 				F5D44F1526783F7E009ECECB /* Tests macOS */,
+				F5DF9DB2268E759C0092D511 /* WatchGlobalLocator */,
+				F5DF9DBE268E75A00092D511 /* WatchGlobalLocator Extension */,
+				F5DF9DD7268E75A10092D511 /* WatchGlobalLocatorTests */,
 				F5D44EF826783F7D009ECECB /* Products */,
 				F5D44F4E267FD3E7009ECECB /* Frameworks */,
 			);
@@ -128,6 +222,9 @@
 				F5D44EFF26783F7D009ECECB /* GlobalLocator.app */,
 				F5D44F0726783F7D009ECECB /* Tests iOS.xctest */,
 				F5D44F1226783F7D009ECECB /* Tests macOS.xctest */,
+				F5DF9DB1268E759C0092D511 /* WatchGlobalLocator.app */,
+				F5DF9DBA268E75A00092D511 /* WatchGlobalLocator Extension.appex */,
+				F5DF9DD4268E75A10092D511 /* WatchGlobalLocatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +272,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F5DF9DB2268E759C0092D511 /* WatchGlobalLocator */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF9DB3268E75A00092D511 /* Assets.xcassets */,
+				F5DF9DB5268E75A00092D511 /* Info.plist */,
+			);
+			path = WatchGlobalLocator;
+			sourceTree = "<group>";
+		};
+		F5DF9DBE268E75A00092D511 /* WatchGlobalLocator Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF9DBF268E75A00092D511 /* GlobalLocatorApp.swift */,
+				F5DF9DC1268E75A00092D511 /* ContentView.swift */,
+				F5DF9DC3268E75A00092D511 /* NotificationController.swift */,
+				F5DF9DC5268E75A00092D511 /* NotificationView.swift */,
+				F5DF9DC7268E75A00092D511 /* ComplicationController.swift */,
+				F5DF9DC9268E75A10092D511 /* Assets.xcassets */,
+				F5DF9DCE268E75A10092D511 /* Info.plist */,
+				F5DF9DCF268E75A10092D511 /* PushNotificationPayload.apns */,
+				F5DF9DCB268E75A10092D511 /* Preview Content */,
+			);
+			path = "WatchGlobalLocator Extension";
+			sourceTree = "<group>";
+		};
+		F5DF9DCB268E75A10092D511 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF9DCC268E75A10092D511 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5DF9DD7268E75A10092D511 /* WatchGlobalLocatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF9DD8268E75A10092D511 /* WatchGlobalLocatorTests.swift */,
+				F5DF9DDA268E75A10092D511 /* Info.plist */,
+			);
+			path = WatchGlobalLocatorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,10 +324,12 @@
 				F5D44EF326783F7D009ECECB /* Sources */,
 				F5D44EF426783F7D009ECECB /* Frameworks */,
 				F5D44EF526783F7D009ECECB /* Resources */,
+				F5DF9DF0268E75A10092D511 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F5DF9DE7268E75A10092D511 /* PBXTargetDependency */,
 			);
 			name = "GlobalLocator (iOS)";
 			packageProductDependencies = (
@@ -256,6 +397,62 @@
 			productReference = F5D44F1226783F7D009ECECB /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F5DF9DB0268E759C0092D511 /* WatchGlobalLocator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5DF9DED268E75A10092D511 /* Build configuration list for PBXNativeTarget "WatchGlobalLocator" */;
+			buildPhases = (
+				F5DF9DAF268E759C0092D511 /* Resources */,
+				F5DF9DEC268E75A10092D511 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5DF9DBD268E75A00092D511 /* PBXTargetDependency */,
+			);
+			name = WatchGlobalLocator;
+			productName = WatchGlobalLocator;
+			productReference = F5DF9DB1268E759C0092D511 /* WatchGlobalLocator.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		F5DF9DB9268E75A00092D511 /* WatchGlobalLocator Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5DF9DE9268E75A10092D511 /* Build configuration list for PBXNativeTarget "WatchGlobalLocator Extension" */;
+			buildPhases = (
+				F5DF9DB6268E75A00092D511 /* Sources */,
+				F5DF9DB7268E75A00092D511 /* Frameworks */,
+				F5DF9DB8268E75A00092D511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchGlobalLocator Extension";
+			packageProductDependencies = (
+				F5DF9DF92694C3CB0092D511 /* AmrSwiftUI */,
+				F5DF9DFB2694D0810092D511 /* GlobalLocatorLib */,
+			);
+			productName = "WatchGlobalLocator Extension";
+			productReference = F5DF9DBA268E75A00092D511 /* WatchGlobalLocator Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		F5DF9DD3268E75A10092D511 /* WatchGlobalLocatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5DF9DF1268E75A10092D511 /* Build configuration list for PBXNativeTarget "WatchGlobalLocatorTests" */;
+			buildPhases = (
+				F5DF9DD0268E75A10092D511 /* Sources */,
+				F5DF9DD1268E75A10092D511 /* Frameworks */,
+				F5DF9DD2268E75A10092D511 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5DF9DD6268E75A10092D511 /* PBXTargetDependency */,
+			);
+			name = WatchGlobalLocatorTests;
+			productName = WatchGlobalLocatorTests;
+			productReference = F5DF9DD4268E75A10092D511 /* WatchGlobalLocatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,6 +475,16 @@
 					F5D44F1126783F7D009ECECB = {
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = F5D44EFE26783F7D009ECECB;
+					};
+					F5DF9DB0268E759C0092D511 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F5DF9DB9268E75A00092D511 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					F5DF9DD3268E75A10092D511 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F5DF9DB9268E75A00092D511;
 					};
 				};
 			};
@@ -302,6 +509,9 @@
 				F5D44EFE26783F7D009ECECB /* GlobalLocator (macOS) */,
 				F5D44F0626783F7D009ECECB /* Tests iOS */,
 				F5D44F1126783F7D009ECECB /* Tests macOS */,
+				F5DF9DB0268E759C0092D511 /* WatchGlobalLocator */,
+				F5DF9DB9268E75A00092D511 /* WatchGlobalLocator Extension */,
+				F5DF9DD3268E75A10092D511 /* WatchGlobalLocatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +541,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F5D44F1026783F7D009ECECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DF9DAF268E759C0092D511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DF9DB4268E75A00092D511 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DF9DB8268E75A00092D511 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DF9DCD268E75A10092D511 /* Preview Assets.xcassets in Resources */,
+				F5DF9DCA268E75A10092D511 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DF9DD2268E75A10092D511 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +610,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5DF9DB6268E75A00092D511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DF9DC4268E75A00092D511 /* NotificationController.swift in Sources */,
+				F5DF9DF8268E7D120092D511 /* ContentView.swift in Sources */,
+				F5DF9DC8268E75A00092D511 /* ComplicationController.swift in Sources */,
+				F5DF9DF7268E7D0D0092D511 /* GlobalLocatorApp.swift in Sources */,
+				F5DF9DC6268E75A00092D511 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5DF9DD0268E75A10092D511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5DF9DD9268E75A10092D511 /* WatchGlobalLocatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -388,6 +642,21 @@
 			isa = PBXTargetDependency;
 			target = F5D44EFE26783F7D009ECECB /* GlobalLocator (macOS) */;
 			targetProxy = F5D44F1326783F7D009ECECB /* PBXContainerItemProxy */;
+		};
+		F5DF9DBD268E75A00092D511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5DF9DB9268E75A00092D511 /* WatchGlobalLocator Extension */;
+			targetProxy = F5DF9DBC268E75A00092D511 /* PBXContainerItemProxy */;
+		};
+		F5DF9DD6268E75A10092D511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5DF9DB9268E75A00092D511 /* WatchGlobalLocator Extension */;
+			targetProxy = F5DF9DD5268E75A10092D511 /* PBXContainerItemProxy */;
+		};
+		F5DF9DE7268E75A10092D511 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5DF9DB0268E759C0092D511 /* WatchGlobalLocator */;
+			targetProxy = F5DF9DE6268E75A10092D511 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -562,7 +831,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = PHEF24B589;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -572,7 +841,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator;
 				PRODUCT_NAME = GlobalLocator;
 				SDKROOT = macosx;
@@ -588,7 +857,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = PHEF24B589;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -598,7 +867,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator;
 				PRODUCT_NAME = GlobalLocator;
 				SDKROOT = macosx;
@@ -695,6 +964,143 @@
 			};
 			name = Release;
 		};
+		F5DF9DEA268E75A10092D511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchGlobalLocator Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = PHEF24B589;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchGlobalLocator Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		F5DF9DEB268E75A10092D511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchGlobalLocator Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = PHEF24B589;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchGlobalLocator Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		F5DF9DEE268E75A10092D511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PHEF24B589;
+				IBSC_MODULE = WatchGlobalLocator_Extension;
+				INFOPLIST_FILE = WatchGlobalLocator/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		F5DF9DEF268E75A10092D511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PHEF24B589;
+				IBSC_MODULE = WatchGlobalLocator_Extension;
+				INFOPLIST_FILE = WatchGlobalLocator/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		F5DF9DF2268E75A10092D511 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PHEF24B589;
+				INFOPLIST_FILE = WatchGlobalLocatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator.WatchGlobalLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchGlobalLocator Extension.appex/WatchGlobalLocator Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		F5DF9DF3268E75A10092D511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PHEF24B589;
+				INFOPLIST_FILE = WatchGlobalLocatorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.amr.GlobalLocator.WatchGlobalLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchGlobalLocator Extension.appex/WatchGlobalLocator Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -743,6 +1149,33 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		F5DF9DE9268E75A10092D511 /* Build configuration list for PBXNativeTarget "WatchGlobalLocator Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5DF9DEA268E75A10092D511 /* Debug */,
+				F5DF9DEB268E75A10092D511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5DF9DED268E75A10092D511 /* Build configuration list for PBXNativeTarget "WatchGlobalLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5DF9DEE268E75A10092D511 /* Debug */,
+				F5DF9DEF268E75A10092D511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5DF9DF1268E75A10092D511 /* Build configuration list for PBXNativeTarget "WatchGlobalLocatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5DF9DF2268E75A10092D511 /* Debug */,
+				F5DF9DF3268E75A10092D511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -781,6 +1214,16 @@
 			productName = AmrSwiftUI;
 		};
 		F5D44F51267FD3E7009ECECB /* GlobalLocatorLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5D44F4B267FD36F009ECECB /* XCRemoteSwiftPackageReference "GlobalLocatorLib" */;
+			productName = GlobalLocatorLib;
+		};
+		F5DF9DF92694C3CB0092D511 /* AmrSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F5D44F45267D10DB009ECECB /* XCRemoteSwiftPackageReference "AmrSwiftUI" */;
+			productName = AmrSwiftUI;
+		};
+		F5DF9DFB2694D0810092D511 /* GlobalLocatorLib */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F5D44F4B267FD36F009ECECB /* XCRemoteSwiftPackageReference "GlobalLocatorLib" */;
 			productName = GlobalLocatorLib;
