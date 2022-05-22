@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F51086D9283AED9400C1AC0A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F51086D8283AED9400C1AC0A /* README.md */; };
 		F54E2A4626855A070026ACC0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E2A4526855A070026ACC0 /* MapView.swift */; };
 		F54E2A4726855A080026ACC0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54E2A4526855A070026ACC0 /* MapView.swift */; };
 		F5D44F0C26783F7D009ECECB /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D44F0B26783F7D009ECECB /* Tests_iOS.swift */; };
@@ -101,6 +102,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F51086D8283AED9400C1AC0A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F54E2A4526855A070026ACC0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F5D44EF026783F6E009ECECB /* GlobalLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalLocatorApp.swift; sourceTree = "<group>"; };
 		F5D44EF126783F6E009ECECB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		F5D44EEA26783F6D009ECECB = {
 			isa = PBXGroup;
 			children = (
+				F51086D8283AED9400C1AC0A /* README.md */,
 				F5D44EEF26783F6E009ECECB /* Shared */,
 				F5D44EF926783F7D009ECECB /* iOS */,
 				F5D44F0026783F7D009ECECB /* macOS */,
@@ -521,6 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51086D9283AED9400C1AC0A /* README.md in Resources */,
 				F5D44F1D26783F7E009ECECB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
