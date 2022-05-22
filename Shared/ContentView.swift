@@ -47,12 +47,14 @@ struct ContentView: View {
                     userRegion = region
                     print("userRegion: \(userRegion)")
                 }
+                //print("region: \(region)")
                 return region
             }
         }
     }
     
     func annotations(region: MKCoordinateRegion, mapSize: CGSize) -> [GLRegion] {
+        //print("annotations region: \(region)")
         var result = [globalLocatorLib.annotationFor(
             region: region,
             mapSize: mapSize
@@ -60,6 +62,7 @@ struct ContentView: View {
         if gotCurrentLocation {
             result.append(GLRegion(id: "userRegion", location: userRegion.center, span: CGSize(width: 40, height: 40)))
         }
+        print("annotations result: \(result)")
         return result
     }
     
